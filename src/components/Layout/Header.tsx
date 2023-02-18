@@ -2,11 +2,15 @@ import classes from  './Header.module.css'
 import mainImg from '../../assets/meals.jpg'
 import Button from '../UI/Button';
 
-const Header = () => {
+interface HeaderProps {
+  showModal: () => void
+}
+
+const Header = ({showModal}: HeaderProps) => {
   return ( <>
     <header className={classes.header}>
       <h1>ReactMeals</h1>
-      <Button/>
+      <Button onOpen={showModal} />
     </header>
     <div className={classes['main-image']}>
     <img src={mainImg} alt="meal" />
