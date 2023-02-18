@@ -6,7 +6,7 @@ import Card from '../UI/Card';
 export interface Meal {
   id: string;
   name: string;
-  description: string;
+  description?: string;
   price: number;
 }
 
